@@ -1,8 +1,232 @@
-## Hoje o dia foi orientado para entender alguns comandos de git e suas interações com o GitHub;
-## O Git é um sistema de versionamento distribuido extremamente útil para uma programação eficiente;
-## O GitHub é uma plataforma remota de criação e armazenamento de repositórios (também remotos) que será utilizada TODOS OS DIAS daqui para frente, até que outra a substitua;
-## Agora vou tentar fazer o push das alterações diárias para a plataforma do GitHub. Se der certo, esta é a última linha, se der errado, adicionarei outras abaixo.
+# exercicios_trybe
+Contém todas as atividades desenvolvidas por __[João Felipe Zini](https://www.linkedin.com/in/jfzini/)__ durante minha tragetória na [Trybe](https://www.betrybe.com/) :rocket:
 
-## Bom, deu certo, porém eu esqueci de criar uma branch para depois mandar um pull request. Alterei direto na main. Então estou refazendo para ser mais seguro e submeter novamente, dessa vez com pull request.
+>"O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais."
 
-## Ainda não comecei um novo dia de estudos na Trybe, é sábado, mas estou aqui para fixar os conteúdos aprendidos, criação de branch nova, alteração dos arquivos, git add, git commit, git push, pull request e merge na plataforma do GitHub para depois dar um git pull e atualizar o merge na minha máquina. Depois vou dar uma adiantada na mátéria de segunda-feira.
+## Módulo 1: Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:  
+
+### Section 1: Unix, Shell e Git
+- [x] 1.1 - Unix & Bash - Parte 1
+- [x] 1.2 - Unix & Bash - Parte 2
+- [x] 1.3 - Git - O que é e para que serve
+- [x] 1.4 - Git & GitHub - Entendendo os comandos
+
+### Section 2: Introdução à HTML & CSS
+- [x] 2.1 - HTML & CSS - Estruturas de página
+- [ ] 2.2 - HTML & CSS - Primeiros passos em CSS
+- [ ] 2.3 - HTML & CSS - Seletores e posicionamento
+- [ ] 2.4 - HTML Semântico
+- [ ] 2.5 - Projeto - Lessons Learned
+
+### Section 3: Introdução à JavaScript
+- [ ] 3.1 - JavaScript - Primeiros passos
+- [ ] 3.2 - JavaScript - Array e loop For
+- [ ] 3.3 - JavaScript - Lógica de Programação e Algoritmos
+- [ ] 3.4 - JavaScript - Objetos e funções
+- [ ] 3.5 - JavaScript - ES6 - let, const, arrow functions e template literals
+- [ ] 3.6 - Projeto - Playground Functions
+
+### Section 4: JavaScript: DOM, Eventos e Web Storage
+- [ ] 4.1 - JavaScript - DOM e seletores
+- [ ] 4.2 - JavaScript - Trabalhando com elementos
+- [ ] 4.3 - JavaScript - Eventos
+- [ ] 4.4 - JavaScript - Web Storage
+- [ ] 4.5 - Projeto - Arte com Pixels
+- [ ] 4.6 - Projetos Bônus
+
+### Section 5: HTML e CSS: Forms, Flexbox e Responsivo
+- [ ] 5.1 - HTML & CSS - Forms
+- [ ] 5.2 - Bibliotecas JavaScript e Frameworks CSS
+- [ ] 5.3 - CSS Flexbox - Parte 1
+- [ ] 5.4 - CSS Flexbox - Parte 2
+- [ ] 5.5 - CSS Responsivo - Mobile First
+- [ ] 5.6 - Projeto - Trybewarts
+
+### Section 6: Introdução à JavaScript ES6 e Testes Unitários
+- [ ] 6.1 - Fluxo de exceções e manipulação de objetos
+- [ ] 6.2 - Primeiros passos em Jest
+- [ ] 6.3 - Matchers e cobertura de código
+- [ ] 6.4 - Projeto - JavaScript Testes Unitários
+
+### Section 7: Higher Order Functions do JavaScript ES6
+- [ ] 7.1 - Introdução a Higher Order Functions
+- [ ] 7.2 - Higher Order Functions - sort e map
+- [ ] 7.3 - Higher Order Functions - filter e reduce
+- [ ] 7.4 - JavaScript ES6 - spread operator, rest parameters e object destructuring
+- [ ] 7.5 - JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
+- [ ] 7.6 - Projeto - Zoo functions
+
+## Módulo 2: Desenvolvimento Front-end :hourglass_flowing_sand:
+
+### Section 1: JavaScript e Testes Assíncronos
+- [ ] 1.1 - JavaScript Assíncrono e Callbacks
+- [ ] 1.2 - JavaScript Assíncrono - Fetch API e async/wait
+- [ ] 1.3 - Jest - Testes Assíncrono
+- [ ] 1.4 - Projeto - Carrinho de Compras
+
+### Section 2: Introdução ao React
+- [ ] 2.1 - 'Hello, world!' no React!
+- [ ] 2.2 - Componentes React
+- [ ] 2.3 - Projeto - Solar System
+
+### Section 3: Componentes com Estado, Eventos e Formulários com React
+- [ ] 3.1 - Componentes com estado e eventos
+- [ ] 3.2 - Formulários no React
+- [ ] 3.3 - Projeto - Tryunfo
+
+### Section 4: Ciclo de Vida de Componentes e React Router
+- [ ] 4.1 - Ciclo de vida de componentes
+- [ ] 4.2 - React Router
+- [ ] 4.3 - Projeto - TrybeTunes
+
+### Section 5: Metodologias Ágeis
+- [ ] 5.1 - Metodologias Ágeis
+- [ ] 5.2 - Projeto - Frontend Online Store
+
+### Section 6: Testes automatizados com React Testing Library
+- [ ] 6.1 - RTL - Primeiros passos
+- [ ] 6.2 - RTL - Mocks e Inputs
+- [ ] 6.3 - RTL - Testando React Router
+- [ ] 6.4 - Projeto - Testes em React
+
+### Section 7: Gerenciamento de estado com Redux
+- [ ] 7.1 - Introdução ao Redux - O estado global da aplicação
+- [ ] 7.2 - Usando o Redux no React
+- [ ] 7.3 - Usando o Redux no React - Prática
+- [ ] 7.4 - Usando o Redux no React - Actions Assíncronas
+- [ ] 7.5 - Testes síncronos com React-Redux
+- [ ] 7.6 - Projeto - Trybe Wallet
+
+### Section 8: Projeto Jogo de Trivia
+- [ ] 8.1 - Projeto - Jogo de Trivia
+
+### Section 9: Context API e React Hooks
+- [ ] 9.1 - Context API do React
+- [ ] 9.2 - React Hooks - useState e useContext
+- [ ] 9.3 - React Hooks - useEffect e Hooks customizados
+- [ ] 9.4 - Projeto - StarWars Datatable com Context API e Hooks
+
+### Section 10: Projeto App de Receitas
+- [ ] 10.1 - Projeto - App de Receitas
+
+## Módulo 3: Desenvolvimento Back-end :hourglass_flowing_sand:
+
+### Section 1: Docker: Utilizando Containers
+- [ ] 1.1 - Utilizando Containers - Docker
+- [ ] 1.2 - Manipulando Imagens no Docker
+- [ ] 1.3 - Orquestrando Container com Docker Compose
+- [ ] 1.4 - Projeto - Docker Todo-List
+
+### Section 2: Introdução à SQL
+- [ ] 2.1 - Banco de dados SQL
+- [ ] 2.2 - Encontrando dados em um banco de dados
+- [ ] 2.3 - Filtrando dados de forma específica
+- [ ] 2.4 - Manipulando tabelas
+- [ ] 2.5 - Projeto - All For One
+
+### Section 3: Funções SQL, Joins e Normalização
+- [ ] 3.1 - Funções mais usadas no SQL
+- [ ] 3.2 - Descomplicando JOINs
+- [ ] 3.3 - Transformando ideiais em um modelo de banco de dados
+- [ ] 3.4 - Aula ao Vivo + Projeto - All For One
+
+### Section 4: Introdução ao desenvolvimento Web com Node.js
+- [ ] 4.1 - Runtime Assíncrono
+- [ ] 4.2 - Node.js: API REST com Express
+- [ ] 4.3 - Node.js: Testes de Integração
+- [ ] 4.4 - Express: Middlewares
+- [ ] 4.5 - Node.js: Express e Mysql
+- [ ] 4.6 - Atividades + Projeto - Talker Manager
+
+### Section 5: Arquitetura de Software: Model, Service e Controller
+- [ ] 5.1 - Arquitetura de Software: Camada Model
+- [ ] 5.2 - Arquitetura de Software: Camada Service
+- [ ] 5.3 - Arquitetura de Software: Camada Controller
+- [ ] 5.4 - Projeto - Store Manager
+
+### Section 6: Node.js: ORM e Autenticação
+- [ ] 6.1 - ORM - Interface da aplicação com o banco de dados
+- [ ] 6.2 - ORM - Associations 1:1 e 1:N
+- [ ] 6.3 - ORM - Associations N:N e Transactions
+- [ ] 6.4 - JWT - (JSON Web Token)
+- [ ] 6.5 - Projeto - API de Blogs
+
+### Section 7: Deployment
+- [ ] 7.1 - Infraestrutura - Deploy com Heroku
+- [ ] 7.2 - Deploy Docker & Heroku
+- [ ] 7.3 - Projeto - Stranger Things
+
+### Section 8: TypeScript
+- [ ] 8.1 - Introdução ao TypeScript
+- [ ] 8.2 - Tipagem Estática e Generics
+- [ ] 8.3 - Express com TypeScript
+- [ ] 8.4 - Projeto - Trybesmith
+
+### Section 9: Programação Orientada a Objetos (POO) e SOLID
+- [ ] 8.1 - Introdução à Orientação a Objetos
+- [ ] 8.2 - Herança e Interfaces
+- [ ] 8.3 - Polimorfismo
+- [ ] 8.4 - SOLID - Introdução e Princípios S, O e D
+- [ ] 8.5 - Princípios L e I
+- [ ] 8.6 - Projeto - Trybers and Dragons
+
+### Section 10: Projeto - TFC - Trybe Futebol Clube
+- [ ] 10.1 - Projeto -  TFC - Trybe Futebol Clube
+
+### Section 11: Introdução ao MongoDB
+- [ ] 11.1 - MongoDB - Introdução
+- [ ] 11.2 - Filter Operators
+- [ ] 11.3 - Operadores de consulta
+- [ ] 11.4 - Updates Simples
+- [ ] 11.5 - Update Complexos - Arrays
+- [ ] 11.5 - Projeto - Commerce
+
+### Section 12: MongoDB com Node.js e POO
+- [ ] 12.1 - Mongoose e arquitetura MSC (Camada Model)
+- [ ] 12.2 - Mongoose e arquitetura MSC (Camada Service e Controller)
+- [ ] 12.3 - Projeto - Car Shop
+
+### Section 13: Projeto - App de Delivery
+- [ ] 13.1 - Projeto - App de Delivery
+
+### Section 14: MasterClass - VPS, CI/CD
+- [ ] 14.1 - VPS
+- [ ] 14.2 - Dia 2
+
+## Módulo 4: Ciência da Computação :hourglass_flowing_sand:
+
+### Section 1: Introdução à Python
+- [ ] 1.1 - Aprendendo Python
+- [ ] 1.2 - Entrada e Saída de dados
+- [ ] 1.3 - Testes
+- [ ] 1.4 - Projeto - Job Insights
+
+### Section 2: Padrões de Projeto
+- [ ] 2.1 - P.O.O em Python
+- [ ] 2.2 - Padrões - Iterator, Adapter, Strategy
+- [ ] 2.3 - Padrões - Decorator, Observer, Factory
+- [ ] 2.4 - Projeto - Relatórios de Estoque
+
+### Section 3: Redes e Raspagem de Dados
+- [ ] 3.1 - Arquitetura de redes
+- [ ] 3.2 - Raspagem de Dados
+- [ ] 3.3 - Outras Ferramentas de Raspagem de Dados
+- [ ] 3.4 - Projeto - Tech news
+
+### Section 4: Algoritmos
+- [ ] 4.1 - Complexidade de Algoritmos
+- [ ] 4.2 - Recursividade e Estratégias para solução de problemas
+- [ ] 4.3 - Algoritmos de ordenação e busca
+- [ ] 4.4 - Projeto - Algoritmos
+
+### Section 5: Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
+- [ ] 5.1 - Arquitetura de Computadores
+- [ ] 5.2 - Arrays
+- [ ] 5.3 - Nó e Listas Encadeadas
+- [ ] 5.4 - Pilhas e Filas
+- [ ] 5.5 - Projeto - TING - Trybe Is Not Google
+
+### Section 6: Estrutura de Dados II: Hashmaps e Sets
+- [ ] 6.1 - Hashmap e Dict
+- [ ] 6.2 - Set
+- [ ] 6.4 - Projeto - Restaurant Orders
