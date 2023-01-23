@@ -45,4 +45,30 @@ else if (currentHour > 4 && currentHour < 11) {
   message = 'Hmmm, cheiro de café recém-passado'
 }
 
-console.log(message);
+
+let weekDay = 'quarta-feira';
+let weekMessage = '';
+
+if (weekDay === 'segunda-feira' || weekDay === 'terca-feira' || weekDay === 'quarta-feira' || weekDay === 'quinta-feira' || weekDay === 'sexta-feira') {
+  weekMessage = 'Oba, mais um dia de aprendizado na Trybe >:D';
+}
+else {
+  weekMessage = 'FINALMENTE, descanso merecido UwU';
+}
+
+
+let studentStatus = 'reprovado';
+switch (studentStatus) {
+  case 'aprovada':
+    console.log('Parabéns, você foi aprovada(o)!');
+    break
+  case 'lista':
+    console.log('Você está na nossa lista de espera');
+    break
+  case 'reprovada':
+  case 'reprovado':
+    console.log('Você foi reprovada(o)');
+    break
+  default:
+    console.log('Informação incorreta');
+}
