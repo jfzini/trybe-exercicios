@@ -199,11 +199,41 @@ if (cost < 0 || value < 0) {
 // De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
 // Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
 
-const income = 1500;
-const inss8 = (income * 0,08)
-const inss9 = ()
+let income = 10000;
+let inssAte130200 = (income * 0.075);
+let inssAte257129 = ((1302.00 * 0.075) + ((income - 1302.00) * 0.09));
+let inssAte385694 = ((1302.00 * 0.075) + ((2571.29 - 1302.00) * 0.09) + ((income - 2571.29) * 0.12));
+let inssAcima385694 = ((1302.00 * 0.075) + ((2571.29 - 1302.00) * 0.09) + ((3856.94 - 2571.29) * 0.12) + ((income - 3856.94) * 0.14));
+let baseDeCalculoIR = 0;
 
-let teste = (income - 1556,95) * 0.09
+if (inssAcima385694 > 877.24) {
+  inssAcima385694 = 877.24
+}
 
-let teste2 = 1500 % 1556.94;
-console.log(teste2);
+if (income <= 1302.00) {
+  baseDeCalculoIR = (income - inssAte130200);
+} else if (income > 1302.00 && income <= 2571.29) {
+  baseDeCalculoIR = (income - inssAte257129);
+} else if (income > 2571.29 && income <= 3856.94) {
+  baseDeCalculoIR = (income - inssAte385694);
+} else if (income > 3856.94) {
+  baseDeCalculoIR = (income - inssAcima385694);
+}
+
+let iRIsencao = baseDeCalculoIR;
+let iRPrimeiraFaixa = baseDeCalculoIR - ((baseDeCalculoIR - 1903.98) * 0.075);
+let iRSegundaFaixa = baseDeCalculoIR - (((2826.65 - 1903.98) * 0.075) + ((baseDeCalculoIR - 2826.65) * 0.15));
+let iRTerceiraFaixa = baseDeCalculoIR - ((((2826.65 - 1903.98) * 0.075) + ((3751.05 - 2826.65) * 0.15)) + (baseDeCalculoIR - 3751.05) * 0.225);
+let iRQuartaFaixa = baseDeCalculoIR - (((((2826.65 - 1903.98) * 0.075) + ((3751.05 - 2826.65) * 0.15)) + (4664.68 - 3751.05) * 0.225) + ((baseDeCalculoIR - 4664.68) * 0.275));
+
+if (baseDeCalculoIR <= 1903.98) {
+  console.log(iRIsencao);
+} else if (baseDeCalculoIR > 1903.98 && baseDeCalculoIR <= 2826.65) {
+  console.log(iRPrimeiraFaixa);
+} else if (baseDeCalculoIR > 2826.65 && baseDeCalculoIR <= 3751.05) {
+  console.log(iRSegundaFaixa);
+} else if (baseDeCalculoIR > 3751.05 && baseDeCalculoIR <= 4664.68) {
+  console.log(iRTerceiraFaixa);
+} else if (baseDeCalculoIR > 4664.68) {
+  console.log(iRQuartaFaixa);
+}
