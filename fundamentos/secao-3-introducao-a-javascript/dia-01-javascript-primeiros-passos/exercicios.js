@@ -200,40 +200,47 @@ if (cost < 0 || value < 0) {
 // Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
 
 let income = 10000;
+let primeiraFaixaINSS = 1302.00;
+let segundaFaixaINSS = 2571.29;
+let terceiraFaixaINSS = 3856.94;
 let inssAte130200 = (income * 0.075);
-let inssAte257129 = ((1302.00 * 0.075) + ((income - 1302.00) * 0.09));
-let inssAte385694 = ((1302.00 * 0.075) + ((2571.29 - 1302.00) * 0.09) + ((income - 2571.29) * 0.12));
-let inssAcima385694 = ((1302.00 * 0.075) + ((2571.29 - 1302.00) * 0.09) + ((3856.94 - 2571.29) * 0.12) + ((income - 3856.94) * 0.14));
+let inssAte257129 = ((primeiraFaixaINSS * 0.075) + ((income - primeiraFaixaINSS) * 0.09));
+let inssAte385694 = ((primeiraFaixaINSS * 0.075) + ((segundaFaixaINSS - primeiraFaixaINSS) * 0.09) + ((income - segundaFaixaINSS) * 0.12));
+let inssAcima385694 = ((primeiraFaixaINSS * 0.075) + ((segundaFaixaINSS - primeiraFaixaINSS) * 0.09) + ((terceiraFaixaINSS - segundaFaixaINSS) * 0.12) + ((income - terceiraFaixaINSS) * 0.14));
 let baseDeCalculoIR = 0;
 
 if (inssAcima385694 > 877.24) {
   inssAcima385694 = 877.24
 }
 
-if (income <= 1302.00) {
+if (income <= primeiraFaixaINSS) {
   baseDeCalculoIR = (income - inssAte130200);
-} else if (income > 1302.00 && income <= 2571.29) {
+} else if (income > primeiraFaixaINSS && income <= segundaFaixaINSS) {
   baseDeCalculoIR = (income - inssAte257129);
-} else if (income > 2571.29 && income <= 3856.94) {
+} else if (income > segundaFaixaINSS && income <= terceiraFaixaINSS) {
   baseDeCalculoIR = (income - inssAte385694);
-} else if (income > 3856.94) {
+} else if (income > terceiraFaixaINSS) {
   baseDeCalculoIR = (income - inssAcima385694);
 }
 
+let primeiraFaixaIR = 1903.98;
+let segundaFaixaIR = 2826.65;
+let terceiraFaixaIR = 3751.05;
+let quartaFaixaIR = 4664.68;
 let iRIsencao = baseDeCalculoIR;
-let iRPrimeiraFaixa = baseDeCalculoIR - ((baseDeCalculoIR - 1903.98) * 0.075);
-let iRSegundaFaixa = baseDeCalculoIR - (((2826.65 - 1903.98) * 0.075) + ((baseDeCalculoIR - 2826.65) * 0.15));
-let iRTerceiraFaixa = baseDeCalculoIR - ((((2826.65 - 1903.98) * 0.075) + ((3751.05 - 2826.65) * 0.15)) + (baseDeCalculoIR - 3751.05) * 0.225);
-let iRQuartaFaixa = baseDeCalculoIR - (((((2826.65 - 1903.98) * 0.075) + ((3751.05 - 2826.65) * 0.15)) + (4664.68 - 3751.05) * 0.225) + ((baseDeCalculoIR - 4664.68) * 0.275));
+let iRPrimeiraFaixa = baseDeCalculoIR - ((baseDeCalculoIR - primeiraFaixaIR) * 0.075);
+let iRSegundaFaixa = baseDeCalculoIR - (((segundaFaixaIR - primeiraFaixaIR) * 0.075) + ((baseDeCalculoIR - segundaFaixaIR) * 0.15));
+let iRTerceiraFaixa = baseDeCalculoIR - ((((segundaFaixaIR - primeiraFaixaIR) * 0.075) + ((terceiraFaixaIR - segundaFaixaIR) * 0.15)) + (baseDeCalculoIR - terceiraFaixaIR) * 0.225);
+let iRQuartaFaixa = baseDeCalculoIR - (((((segundaFaixaIR - primeiraFaixaIR) * 0.075) + ((terceiraFaixaIR - segundaFaixaIR) * 0.15)) + (quartaFaixaIR - terceiraFaixaIR) * 0.225) + ((baseDeCalculoIR - quartaFaixaIR) * 0.275));
 
-if (baseDeCalculoIR <= 1903.98) {
+if (baseDeCalculoIR <= primeiraFaixaIR) {
   console.log(iRIsencao);
-} else if (baseDeCalculoIR > 1903.98 && baseDeCalculoIR <= 2826.65) {
+} else if (baseDeCalculoIR > primeiraFaixaIR && baseDeCalculoIR <= segundaFaixaIR) {
   console.log(iRPrimeiraFaixa);
-} else if (baseDeCalculoIR > 2826.65 && baseDeCalculoIR <= 3751.05) {
+} else if (baseDeCalculoIR > segundaFaixaIR && baseDeCalculoIR <= terceiraFaixaIR) {
   console.log(iRSegundaFaixa);
-} else if (baseDeCalculoIR > 3751.05 && baseDeCalculoIR <= 4664.68) {
+} else if (baseDeCalculoIR > terceiraFaixaIR && baseDeCalculoIR <= quartaFaixaIR) {
   console.log(iRTerceiraFaixa);
-} else if (baseDeCalculoIR > 4664.68) {
+} else if (baseDeCalculoIR > quartaFaixaIR) {
   console.log(iRQuartaFaixa);
 }
