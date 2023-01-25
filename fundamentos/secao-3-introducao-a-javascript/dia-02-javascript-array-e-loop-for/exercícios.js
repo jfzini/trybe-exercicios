@@ -78,3 +78,42 @@ console.log(ate25);
 for (let indexDivisao = 0; indexDivisao < ate25.length; indexDivisao += 1) {
   console.log(ate25[indexDivisao] / 2);
 }
+
+// Ordene o array numbers em ordem crescente e imprima seus valores;
+
+let numbersArray = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+for (let firstIndex = 1; firstIndex < numbersArray.length; firstIndex += 1) {
+  for (let secondIndex = 0; secondIndex < firstIndex; secondIndex += 1) {
+    if (numbersArray[firstIndex] < numbersArray[secondIndex]) {
+      let position = numbersArray[firstIndex];
+      numbersArray[firstIndex] = numbersArray[secondIndex];
+      numbersArray[secondIndex] = position;
+    }
+  }
+}
+console.log(numbersArray);
+
+// Agora, crie um novo array a partir do array numbers, sem perdê-lo. Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte. 
+
+
+let multArray = [];
+let secondIndex = 1;
+for (let firstIndex = 0; firstIndex < numbersArray.length; firstIndex += 1) {
+  if (firstIndex === (numbersArray.length - 1)) {
+    multArray.push(numbersArray[firstIndex] * 2)
+    } else {
+    multArray.push(numbersArray[firstIndex] * numbersArray[secondIndex])
+    secondIndex = secondIndex + 1;
+    }
+}
+
+  console.log(multArray);
+
+
+  let sum = 0;
+
+  for (let indexSoma = 1; indexSoma <= 100; indexSoma += 1) {
+    sum = sum + indexSoma;
+  }
+ 
