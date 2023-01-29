@@ -1,4 +1,7 @@
 // COMEÇANDO ALGUNS REQUISITOS DO PROJETO//
+
+// REQUISITO 1:
+
 const girafa = true;
 const elefante = false;
 const macaco = false;
@@ -18,3 +21,16 @@ const compareTrue = (param1, param2) => {
 }
 
 console.log(compareTrue(macaco, elefante));
+
+// REQUISITO 2:
+
+const splitSentence = (string) => {
+  if (typeof string == 'string') {
+    const resultado = string.split(' ');
+    return resultado;
+  }
+  return 'Invalid';
+}
+
+console.log(splitSentence('go trybe'));
+
