@@ -100,4 +100,24 @@ console.log(catAndMouse(5,2,8));
 
 //REQUISITO 8:
 
+const fizzBuzz = (numArray) => {
+  const stringArray = [];
+  for (const number of numArray) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      stringArray.push('fizzBuzz');
+    } else if (number % 3 === 0) {
+      stringArray.push('fizz');
+    } else if (number % 5 === 0) {
+      stringArray.push('buzz');
+    } else {
+      stringArray.push('bug!');
+    }
+  }
+  return stringArray;
+}
+
+console.log(fizzBuzz([9, 25]));
+
+//REQUISITO 9:
+
 
