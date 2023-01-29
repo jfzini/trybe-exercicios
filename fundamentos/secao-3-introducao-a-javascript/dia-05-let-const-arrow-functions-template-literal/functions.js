@@ -36,8 +36,12 @@ console.log(splitSentence('FOGUETE'));
 
 // REQUISITO 3:
 
-const concatName = (array) => {
-  return array[array.length - 1] + ', ' + array[0];
-}
+const concatName = (array) => array[array.length - 1] + ', ' + array[0];
+
 console.log(concatName(['captain', 'my', 'captain']));
 
+//REQUISITO 4:
+
+const footballPoints = (wins, ties) =>  wins * 3 + ties;
+
+console.log(footballPoints(0,0));
