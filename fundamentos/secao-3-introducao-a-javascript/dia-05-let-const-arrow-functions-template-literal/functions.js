@@ -45,3 +45,24 @@ console.log(concatName(['captain', 'my', 'captain']));
 const footballPoints = (wins, ties) =>  wins * 3 + ties;
 
 console.log(footballPoints(0,0));
+
+//REQUISITO 5:
+
+const highestCount = (numArray) => {
+  let highestNumber = numArray[0];
+  let highestNumberTimes = 0;
+  for (const number of numArray) {
+    if (number > highestNumber) {
+      highestNumber = number;
+    }
+  };
+  for (const number of numArray) {
+    if (number === highestNumber) {
+      highestNumberTimes += 1;
+    }
+  };
+  return highestNumberTimes;
+}
+
+console.log(highestCount([0,0,0]));
+
