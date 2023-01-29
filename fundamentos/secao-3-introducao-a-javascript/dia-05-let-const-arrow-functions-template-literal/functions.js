@@ -32,5 +32,12 @@ const splitSentence = (string) => {
   return 'Invalid';
 }
 
-console.log(splitSentence('go trybe'));
+console.log(splitSentence('FOGUETE'));
+
+// REQUISITO 3:
+
+const concatName = (array) => {
+  return array[array.length - 1] + ', ' + array[0];
+}
+console.log(concatName(['captain', 'my', 'captain']));
 
