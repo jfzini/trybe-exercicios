@@ -164,4 +164,16 @@ console.log(decode('H4w 1r2 y45 t4d1y?'));
 
 //REQUISITO 10:
 
+const techList = (array, string) => {
+  let objectArray = [];
+  for (const skills of array.sort()) {
+    objectArray.push({
+      tech: skills,
+      name: string
+    })
+  }
+  return objectArray;
+}
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'Javascript'], 'Lucas'));
+
 
