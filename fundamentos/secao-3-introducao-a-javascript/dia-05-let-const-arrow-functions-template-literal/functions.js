@@ -217,3 +217,18 @@ return phoneNumber;
 }
 
 console.log(generatePhoneNumber([7,2,3,4,5,6,7,9,9,0,7]));
+
+//BÔNUS 2:
+
+const triangleCheck = (lineA, lineB, lineC) => {
+  if((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC))
+    || (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC))
+    || (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA))) {
+    return true;
+  }
+  return false;
+}
+
+console.log(triangleCheck(5,4,8));
+
+//BONUS 3:
