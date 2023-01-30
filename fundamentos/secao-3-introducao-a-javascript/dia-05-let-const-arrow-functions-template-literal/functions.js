@@ -120,4 +120,48 @@ console.log(fizzBuzz([9, 25]));
 
 //REQUISITO 9:
 
+const encode = (string) => {
+  let encoded = '';
+  for (const character of string) {
+    if (character === 'a') {
+      encoded = encoded + '1';
+    } else if (character === 'e') {
+      encoded = encoded + '2';
+    } else if (character === 'i') {
+      encoded = encoded + '3';
+    } else if (character === 'o') {
+      encoded = encoded + '4';
+    } else if (character === 'u') {
+      encoded = encoded + '5';
+    } else {
+      encoded = encoded + character;
+    }
+  }
+  return encoded;
+}
+
+const decode = (string) => {
+  let decoded = '';
+  for (const character of string) {
+    if (character === '1') {
+      decoded = decoded + 'a';
+    } else if (character === '2') {
+      decoded = decoded + 'e';
+    } else if (character === '3') {
+      decoded = decoded + 'i';
+    } else if (character === '4') {
+      decoded = decoded + 'o';
+    } else if (character === '5') {
+      decoded = decoded + 'u';
+    } else {
+      decoded = decoded + character;
+    }
+  }
+  return decoded;
+}
+
+console.log(decode('H4w 1r2 y45 t4d1y?'));
+
+//REQUISITO 10:
+
 
