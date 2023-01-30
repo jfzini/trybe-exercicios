@@ -174,6 +174,47 @@ const techList = (array, string) => {
   }
   return objectArray;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'Javascript'], 'Lucas'));
+console.log(techList([''], 'Lucas'));
 
+//BONUS 1:
 
+const generatePhoneNumber = (numArray) => {
+  if (numArray.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
+
+  for (const number of numArray) {
+    if (number < 0 || number > 9) {
+      return 'Não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  for (const number of numArray) {
+    let frequency = 0;
+    for (const numberRepetition of numArray) {
+      if (number === numberRepetition) {
+        frequency += 1;
+      }
+    }
+    if (frequency >= 3) {
+      return 'Não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  let phoneNumber = '';
+  for (const numIndex in numArray) {
+    console.log(numIndex);
+    if (numIndex === 0) {
+      phoneNumber = '(' + numArray[0];
+    } else if (numIndex === 1) {
+      phoneNumber = phoneNumber + numArray[1] + ') ';
+    } else if (numIndex === 6) {
+      phoneNumber = phoneNumber + numArray[6] + '-';
+    } else {
+      phoneNumber = phoneNumber + numArray[numIndex];
+    }
+  }
+return phoneNumber;
+}
+
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
