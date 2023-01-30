@@ -203,12 +203,11 @@ const generatePhoneNumber = (numArray) => {
 
   let phoneNumber = '';
   for (const numIndex in numArray) {
-    console.log(numIndex);
-    if (numIndex === 0) {
+    if (numIndex == 0) {
       phoneNumber = '(' + numArray[0];
-    } else if (numIndex === 1) {
+    } else if (numIndex == 1) {
       phoneNumber = phoneNumber + numArray[1] + ') ';
-    } else if (numIndex === 6) {
+    } else if (numIndex == 6) {
       phoneNumber = phoneNumber + numArray[6] + '-';
     } else {
       phoneNumber = phoneNumber + numArray[numIndex];
@@ -217,4 +216,4 @@ const generatePhoneNumber = (numArray) => {
 return phoneNumber;
 }
 
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
+console.log(generatePhoneNumber([7,2,3,4,5,6,7,9,9,0,7]));
