@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragraphs">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragraphs">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementById('page-title').innerText = 'Tudo em todo lugar ao mesmo tempo';
+      document.getElementById('second-paragraph').innerText = 'Este é um segundo parágrafo extremamente criativo e modificado.';
+      document.getElementById('subtitle').innerText = 'alterando o subtítulo';
+      const firstParagraph = document.getElementsByClassName('paragraphs')[0];
+      firstParagraph.style.color = 'green';
+      document.getElementsByTagName('h4')[0].style.color = 'blue';
+    </script>
+  </body>
+</html>
