@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho">
+        <h2>Primeiro Filho</h2>
+      </section>
+      <section id="elementoOndeVoceEsta">
+        <h2>Elemento que você deve remover</h2>
+      </section>
+      <section id="terceiroFilho">
+        <h2>Terceiro Filho</h2>
+      </section>
+      <section id="quartoEUltimoFilho">
+        <h2>Quarto Filho</h2>
+      </section>
+    </section>
+  </main>
+<script>
+  let primeiroFilho = document.getElementById('primeiroFilho');
+  let elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+  let listaH2 = document.querySelectorAll('h2');
+  elementoOndeVoceEsta.removeChild(listaH2[1]);
+
+</script>
+</body>
+</html>
