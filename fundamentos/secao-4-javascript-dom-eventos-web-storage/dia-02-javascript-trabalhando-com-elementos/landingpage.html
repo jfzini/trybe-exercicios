@@ -108,6 +108,22 @@
       createListItem(['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'], uList);
     
       /*Adicione 3 tags h3, todas sendo filhas do main criado no passo 2*/
+      const createH3 = (contentArray, parent) => {
+        for (const content of contentArray) {
+          const h3 = document.createElement('h3');
+          h3.innerText = content;
+          h3.className = 'description'; //inserido no último requisito
+          parent.appendChild(h3);
+        }
+      };
+      createH3(['Primeira h3', 'Segunda h3', 'Terceira h3'], main);
+
+      /*Adicione a classe title na tag h1 criada;*/
+      h1.className = 'title';
+
+      /*Adicione a classe description nas 3 tags h3 criadas;*/
+      //inserido na função criada anteriormente.
+
 
     </script>
   </body>
