@@ -44,15 +44,15 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 
 ### Section 6: Introdução à JavaScript ES6 e Testes Unitários
 - [x] 6.1 - Fluxo de exceções e manipulação de objetos
-- [ ] 6.2 - Primeiros passos em Jest
-- [ ] 6.3 - Matchers e cobertura de código
-- [ ] 6.4 - Projeto - JavaScript Testes Unitários
+- [x] 6.2 - Primeiros passos em Jest
+- [x] 6.3 - Matchers e cobertura de código
+- [x] 6.4 - Projeto - JavaScript Testes Unitários
 
 ### Section 7: Higher Order Functions do JavaScript ES6
-- [ ] 7.1 - Introdução a Higher Order Functions
-- [ ] 7.2 - Higher Order Functions - sort e map
-- [ ] 7.3 - Higher Order Functions - filter e reduce
-- [ ] 7.4 - JavaScript ES6 - spread operator, rest parameters e object destructuring
+- [x] 7.1 - Introdução a Higher Order Functions
+- [x] 7.2 - Higher Order Functions - sort e map
+- [x] 7.3 - Higher Order Functions - filter e reduce
+- [x] 7.4 - JavaScript ES6 - spread operator, rest parameters e object destructuring
 - [ ] 7.5 - JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
 - [ ] 7.6 - Projeto - Zoo functions
 

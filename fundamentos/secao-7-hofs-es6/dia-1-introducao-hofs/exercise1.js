@@ -100,19 +100,25 @@ const someBookWasReleaseOnThe80s = (array) => array.some((book) => (1980 <= book
 //   return true;
 // }
 
-const authorUnique = (array) => {
-  const birthYears = array.map((book) => book.author.birthYear)
-  let verify = true;
-  birthYears.sort((a, b) => {
-    if (a > b || b > a) {
-      return a - b;
-    }
-    if (a === b) {
-      verify = false;
-    }
-  });
-  return verify;
-}
+// const authorUnique = (array) => {
+//   const birthYears = array.map((book) => book.author.birthYear)
+//   let verify = true;
+//   birthYears.sort((a, b) => {
+//     if (a > b || b > a) {
+//       return a - b;
+//     }
+//     if (a === b) {
+//       verify = false;
+//       return a - b;
+//     }
+//   });
+//   return verify;
+// }
 
+const authorUnique = (array) => {
+  const birthYears = array.map((book) => book.author.birthYear);
+  const uniqueBirthYears = new Set(birthYears);
+  return uniqueBirthYears.size === birthYears.length;
+}
 
 console.log(authorUnique(books));
