@@ -53,15 +53,16 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 - [x] 7.2 - Higher Order Functions - sort e map
 - [x] 7.3 - Higher Order Functions - filter e reduce
 - [x] 7.4 - JavaScript ES6 - spread operator, rest parameters e object destructuring
-- [ ] 7.5 - JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
-- [ ] 7.6 - Projeto - Zoo functions
+- [x] 7.5 - JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
+- [x] 7.6 - Projeto - Zoo functions
 
 ## Módulo 2: Desenvolvimento Front-end :hourglass_flowing_sand:
 
-### Section 1: JavaScript e Testes Assíncronos
-- [ ] 1.1 - JavaScript Assíncrono e Callbacks
-- [ ] 1.2 - JavaScript Assíncrono - Fetch API e async/wait
-- [ ] 1.3 - Jest - Testes Assíncrono
+### Section 1: Introdução ao Front-end e JavaScript assíncrono
+- [x] 1.1 - Ambiente de desenvolvimento
+- [ ] 1.1 - JavaScript Assíncrono - promises e fetch
+- [ ] 1.2 - Prática - casa de câmbio
+- [ ] 1.3 - Async, await e testes assíncronos
 - [ ] 1.4 - Projeto - Carrinho de Compras
 
 ### Section 2: Introdução ao React
