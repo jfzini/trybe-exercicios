@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validator</title>
+  </head>
+  <body>
+    <h1>Validator</h1>
+    <form action="">
+      <input type="text" />
+      <select name="validation-options" id="validate">
+        <option value="email">E-mail</option>
+        <option value="cpf">CPF</option>
+        <option value="cep">CEP</option>
+        <option value="phone">Celular</option>
+        <option value="hex">Hex Color</option>
+      </select>
+      <button id="val-button" type="button"> Validar</button>
+    </form>
+    <p id="resultado">Digite o valor, escolha uma opção e clique em "Validar"</p>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
