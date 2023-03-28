@@ -60,13 +60,13 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 
 ### Section 1: Introdução ao Front-end e JavaScript assíncrono
 - [x] 1.1 - Ambiente de desenvolvimento
-- [ ] 1.1 - JavaScript Assíncrono - promises e fetch
-- [ ] 1.2 - Prática - casa de câmbio
-- [ ] 1.3 - Async, await e testes assíncronos
-- [ ] 1.4 - Projeto - Carrinho de Compras
+- [x] 1.1 - JavaScript Assíncrono - promises e fetch
+- [x] 1.2 - Prática - casa de câmbio
+- [x] 1.3 - Async, await e testes assíncronos
+- [x] 1.4 - Projeto - Carrinho de Compras
 
 ### Section 2: Introdução ao React
-- [ ] 2.1 - 'Hello, world!' no React!
+- [x] 2.1 - 'Hello, world!' no React!
 - [ ] 2.2 - Componentes React
 - [ ] 2.3 - Projeto - Solar System
 
