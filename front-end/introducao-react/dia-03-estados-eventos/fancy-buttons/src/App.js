@@ -11,18 +11,18 @@ class App extends React.Component {
   }
 
   handleClick1 = async (event) => {
-    await this.setState((prevState, _props) => ({
+    await this.setState((prevState) => ({
       counter1: prevState.counter1 + 1,
     }));
 
     if (this.state.counter1 % 2 === 0) {
       event.target.style.backgroundColor = 'green';
     } else {
-      event.target.style.backgroundColor = 'yellow';
+      event.target.className+'yellow';
     }
   }
   handleClick2 = async (event) => {
-    await this.setState((prevState, _props) => ({
+    await this.setState((prevState) => ({
       counter2: prevState.counter2 + 1,
     }))
 
@@ -33,7 +33,7 @@ class App extends React.Component {
     }
   }
   handleClick3 = async (event) => {
-    await this.setState((prevState, _props) => ({
+    await this.setState((prevState) => ({
       counter3: prevState.counter3 + 1,
     }))
 
