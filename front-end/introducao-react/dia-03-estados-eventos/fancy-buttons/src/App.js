@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
 
 class App extends React.Component {
   
@@ -9,20 +10,38 @@ class App extends React.Component {
     counter3: 0,
   }
 
-  handleClick1 = () => {
-    this.setState((prevState, _props) => ({
+  handleClick1 = async (event) => {
+    await this.setState((prevState, _props) => ({
       counter1: prevState.counter1 + 1,
-    }))
+    }));
+
+    if (this.state.counter1 % 2 === 0) {
+      event.target.style.backgroundColor = 'green';
+    } else {
+      event.target.style.backgroundColor = 'yellow';
+    }
   }
-  handleClick2 = () => {
-    this.setState((prevState, _props) => ({
+  handleClick2 = async (event) => {
+    await this.setState((prevState, _props) => ({
       counter2: prevState.counter2 + 1,
     }))
+
+    if (this.state.counter2 % 2 === 0) {
+      event.target.style.backgroundColor = 'green';
+    } else {
+      event.target.style.backgroundColor = 'yellow';
+    }
   }
-  handleClick3 = () => {
-    this.setState((prevState, _props) => ({
+  handleClick3 = async (event) => {
+    await this.setState((prevState, _props) => ({
       counter3: prevState.counter3 + 1,
     }))
+
+    if (this.state.counter3 % 2 === 0) {
+      event.target.style.backgroundColor = 'green';
+    } else {
+      event.target.style.backgroundColor = 'yellow';
+    }
   }
 
   render() {
