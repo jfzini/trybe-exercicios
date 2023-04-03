@@ -2,14 +2,15 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
-  handleClick1() {
-    console.log('CLIQUE 1');
+
+  handleClick1 = () => {
+    console.log(this);
   }
-  handleClick2() {
-    console.log('CLIQUE 2');
+  handleClick2 = () => {
+    console.log(this);
   }
-  handleClick3() {
-    console.log('CLIQUE 3');
+  handleClick3 = () => {
+    console.log(this);
   }
 
   render() {
