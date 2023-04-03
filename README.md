@@ -67,11 +67,11 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 
 ### Section 2: Introdução ao React
 - [x] 2.1 - 'Hello, world!' no React!
-- [ ] 2.2 - Componentes React
-- [ ] 2.3 - Projeto - Solar System
+- [x] 2.2 - Componentes React
+- [x] 2.3 - Projeto - Solar System
 
 ### Section 3: Componentes com Estado, Eventos e Formulários com React
-- [ ] 3.1 - Componentes com estado e eventos
+- [x] 3.1 - Componentes com estado e eventos
 - [ ] 3.2 - Formulários no React
 - [ ] 3.3 - Projeto - Tryunfo
 
