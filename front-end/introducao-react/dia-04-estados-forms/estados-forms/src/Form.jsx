@@ -16,6 +16,8 @@ class Form extends Component {
   };
 
   render() {
+    const { userName, userNumber, textArea, select } = this.state;
+
     return (
       <>
         <h1>Meu formulário</h1>
@@ -42,9 +44,9 @@ class Form extends Component {
             <textarea
               name="textArea"
               id="textarea"
-              value={this.state.textArea.toUpperCase()}
+              value={textArea.toUpperCase()}
               onChange={this.handleTextAreaChange}
-            ></textarea>
+            />
           </label>
         </form>
       </>
