@@ -7,16 +7,18 @@ class Form extends Component {
     userNumber: 0,
     textArea: '',
     select: '',
+    checkBox: false,
   };
 
-  handleTextAreaChange = (event) => {
+  handleChange = ({ target }) => {
+    const value = target.name === 'checkBox' ? target.checked : target.value;
     this.setState({
-      textArea: event.target.value,
+      [target.name]: value,
     });
   };
 
   render() {
-    const { userName, userNumber, textArea, select } = this.state;
+    const { userName, userNumber, textArea, select, checkBox } = this.state;
 
     return (
       <>
@@ -24,19 +26,31 @@ class Form extends Component {
         <form className="form">
           <label htmlFor="select">
             Qualquer coisa:
-            <select name="select" id="select">
+            <select name="select" id="select" onChange={this.handleChange}>
               Qualquer Coisa
             </select>
           </label>
 
           <label htmlFor="text">
             Insira um texto:
-            <input type="text" name="userName" id="text" />
+            <input
+              type="text"
+              name="userName"
+              id="text"
+              value={userName.toUpperCase()}
+              onChange={this.handleChange}
+            />
           </label>
 
           <label htmlFor="number">
             Insira um número:
-            <input type="number" name="userNumber" id="number" />
+            <input
+              type="number"
+              name="userNumber"
+              id="number"
+              value={userNumber}
+              onChange={this.handleChange}
+            />
           </label>
 
           <label htmlFor="textarea">
@@ -45,7 +59,17 @@ class Form extends Component {
               name="textArea"
               id="textarea"
               value={textArea.toUpperCase()}
-              onChange={this.handleTextAreaChange}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label htmlFor="checkbox">
+            Aceito os termos de serviço:
+            <input
+              type="checkbox"
+              name="checkBox"
+              value={checkBox}
+              id="checkbox"
+              onChange={this.handleChange}
             />
           </label>
         </form>
