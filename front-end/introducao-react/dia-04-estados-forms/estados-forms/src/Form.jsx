@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
+import Input from './Input';
 
 class Form extends Component {
   state = {
@@ -31,27 +32,21 @@ class Form extends Component {
             </select>
           </label>
 
-          <label htmlFor="text">
-            Insira um texto:
-            <input
-              type="text"
-              name="userName"
-              id="text"
-              value={userName.toUpperCase()}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            content="Insira um texto:"
+            type="text"
+            name='userName'
+            value={userName.toUpperCase()}
+            handleChange={this.handleChange}
+          />
 
-          <label htmlFor="number">
-            Insira um número:
-            <input
-              type="number"
-              name="userNumber"
-              id="number"
-              value={userNumber}
-              onChange={this.handleChange}
-            />
-          </label>
+          <Input
+            content="Insira um número:"
+            type="number"
+            name='userNumber'
+            value={userNumber}
+            handleChange={this.handleChange}
+          />
 
           <label htmlFor="textarea">
             Insira um texto grandão:
@@ -62,6 +57,7 @@ class Form extends Component {
               onChange={this.handleChange}
             />
           </label>
+
           <label htmlFor="checkbox">
             Aceito os termos de serviço:
             <input
