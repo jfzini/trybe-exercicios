@@ -6,25 +6,27 @@ class User extends Component {
     userData: {},
   };
 
-  async componentDidMount() {
-    const fetchUserData = await fetch('https://api.randomuser.me/');
-    const parsedUserData = await fetchUserData.json();
-    const results = parsedUserData.results;
-    const {
-      name: {title, first, last},
-      email,
-      dob: {age},
-      picture: { medium }
-    } = results[0];
-    this.setState({
-      isLoadings: false,
-      userData: {
-        name: `${title} ${first} ${last}`,
+  componentDidMount() {
+    fetch('https://api.randomuser.me/')
+    .then(response => response.json())
+    .then(data => { 
+      console.log(data);
+      const {
+        name: {title, first, last},
         email,
-        age,
-        medium,
-      },
-    });
+        dob: {age},
+        picture: { medium }
+      } = data.results[0];
+      this.setState({
+        isLoadings: false,
+        userData: {
+          name: `${title} ${first} ${last}`,
+          email,
+          age,
+          medium,
+        },
+      });
+    })
   }
 
   render() {
