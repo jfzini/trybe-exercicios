@@ -1,8 +1,20 @@
 // App.js
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [userName, setUserName] = useState('')
+  const [showName, setShowName] = useState(false)
+
+  const handleClick = () => {
+    setShowName(!showName)
+  }
+
+  const handleChange = ({target}) => {
+    const value = target.value;
+    setUserName(value);
+  }
+
   return (
     <div className="App">
       <label htmlFor="id-email">
@@ -11,8 +23,10 @@ function App() {
       </label>
       <label htmlFor="id-name">
         Nome
-        <input id="id-name" type="text" data-testid="id-name" value="João Felipe Zini"/>
+        <input id="id-name" type="text" data-testid="id-name" value={userName} onChange={handleChange}/>
       </label>
+      <button onClick={handleClick}>Enviar</button>
+      {showName && <p data-testid="username-p">{userName}</p>}
     </div>
   );
 }
