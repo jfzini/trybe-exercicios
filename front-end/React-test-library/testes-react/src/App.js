@@ -9,6 +9,10 @@ function App() {
         Email
         <input id="id-email" type="email" />
       </label>
+      <label htmlFor="id-name">
+        Nome
+        <input id="id-name" type="text" />
+      </label>
     </div>
   );
 }
