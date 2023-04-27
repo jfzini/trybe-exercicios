@@ -10,6 +10,6 @@ test("#divisivelPorDois", () => {
   divisivelPorDois = jest.fn().mockReturnValue(true);
 
   divisivelPorDois();
-  expect(divisivelPorDois).toHaveBeenCalled();
+  expect(divisivelPorDois).toHaveBeenCalledTimes(1);
   expect(divisivelPorDois()).toBe(true);
 });
