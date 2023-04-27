@@ -11,7 +11,7 @@ function App() {
       </label>
       <label htmlFor="id-name">
         Nome
-        <input id="id-name" type="text" />
+        <input id="id-name" type="text" data-testid="id-name" value="João Felipe Zini"/>
       </label>
     </div>
   );
