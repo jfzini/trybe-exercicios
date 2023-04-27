@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+it(`should have an email input with the label 'Email' associated with it`, () => {
   render(<App />);
-  const linkElement = screen.getByText(/algo que não aparece/i);
-  expect(linkElement).toBeInTheDocument();
+  const inputElement = screen.getByLabelText(/^email$/i);
+  expect(inputElement).toBeInTheDocument();
+  expect(inputElement).toHaveProperty('type', 'email')
 });
