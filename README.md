@@ -72,20 +72,20 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 
 ### Section 3: Componentes com Estado, Eventos e Formulários com React
 - [x] 3.1 - Componentes com estado e eventos
-- [ ] 3.2 - Formulários no React
-- [ ] 3.3 - Projeto - Tryunfo
+- [x] 3.2 - Formulários no React
+- [x] 3.3 - Projeto - Tryunfo
 
 ### Section 4: Ciclo de Vida de Componentes e React Router
-- [ ] 4.1 - Ciclo de vida de componentes
-- [ ] 4.2 - React Router
-- [ ] 4.3 - Projeto - TrybeTunes
+- [x] 4.1 - Ciclo de vida de componentes
+- [x] 4.2 - React Router
+- [x] 4.3 - Projeto - TrybeTunes
 
 ### Section 5: Metodologias Ágeis
-- [ ] 5.1 - Metodologias Ágeis
-- [ ] 5.2 - Projeto - Frontend Online Store
+- [x] 5.1 - Metodologias Ágeis
+- [x] 5.2 - Projeto - Frontend Online Store
 
 ### Section 6: Testes automatizados com React Testing Library
-- [ ] 6.1 - RTL - Primeiros passos
+- [x] 6.1 - RTL - Primeiros passos
 - [ ] 6.2 - RTL - Mocks e Inputs
 - [ ] 6.3 - RTL - Testando React Router
 - [ ] 6.4 - Projeto - Testes em React
