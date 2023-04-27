@@ -17,13 +17,17 @@ it(`should have two inputs`, () => {
 });
 
 //testing toHaveValue and getByTestId
-it(`should have a text input with the value of 'João Felipe Zini'`, () => {
+it(`should have a text input with the value of 'João Felipe Zini'`, async () => {
   render(<App />);
   const inputName = screen.getByTestId('id-name');
-  const button = screen.getByRole('button');
-  const renderName = screen.queryByTestId('username-p');
-  expect(renderName).not.toBeInTheDocument();
+  const button = screen.getByTestId('render-button');
+  const noRenderName = screen.queryByTestId('username-p');
+  expect(noRenderName).not.toBeInTheDocument();
 
-  // userEvent.type(inputName, 'João Felipe Zini');
-  // expect(inputName).toHaveValue('João Felipe Zini');
+  userEvent.type(inputName, 'João Felipe Zini');
+  await userEvent.click(button);
+
+  const renderName = screen.getByTestId('username-p');
+  expect(inputName).toHaveValue('João Felipe Zini');
+  expect(renderName).toHaveTextContent(/^João Felipe Zini$/);
 });

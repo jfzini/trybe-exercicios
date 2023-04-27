@@ -25,7 +25,7 @@ function App() {
         Nome
         <input id="id-name" type="text" data-testid="id-name" value={userName} onChange={handleChange}/>
       </label>
-      <button onClick={handleClick}>Enviar</button>
+      <button onClick={handleClick} data-testid="render-button">Enviar</button>
       {showName && <p data-testid="username-p">{userName}</p>}
     </div>
   );
