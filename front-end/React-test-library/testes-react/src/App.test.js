@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 import { click } from '@testing-library/user-event/dist/click';
+import { act } from 'react-dom/test-utils';
 
 describe ('Test the funcionalities of the landing page', () => {
   
@@ -25,8 +26,10 @@ describe ('Test the funcionalities of the landing page', () => {
     const noRenderName = screen.queryByTestId('username-p');
     expect(noRenderName).not.toBeInTheDocument();
   
-    userEvent.type(inputName, 'João Felipe Zini');
-    await userEvent.click(button);
+    act(() => {
+      userEvent.type(inputName, 'João Felipe Zini');
+      userEvent.click(button);
+    })
   
     const renderName = screen.getByTestId('username-p');
     expect(inputName).toHaveValue('João Felipe Zini');
