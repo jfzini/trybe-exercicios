@@ -19,7 +19,7 @@ describe ('Test the funcionalities of the landing page', () => {
     expect(inputElements).toHaveLength(2);
   });
   
-  it(`should have an element with the content of 'João Felipe Zini' afeter clicking on the button`, async () => {
+  it(`should have an element with the content of 'João Felipe Zini' afeter clicking on the button`, () => {
     render(<App />);
     const inputName = screen.getByTestId('id-name');
     const button = screen.getByTestId('render-button');
