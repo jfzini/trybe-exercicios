@@ -11,13 +11,18 @@ const reducer = (state = INITIAL_STATE, action) => {
   }
   return state;
 };
-
 const store = createStore(reducer, composeWithDevTools());
-
 const action = { type: 'INC_COUNTER' };
+
 const incBtn = document.querySelector('button');
 incBtn.addEventListener('click', () => {
   store.dispatch(action);
+});
+
+store.subscribe(() => {
+  const globalState = store.getState();
+  const incText = document.querySelector('h2');
+  incText.innerHTML = globalState.count;
 });
 
 // const incBtn = document.querySelector('button');
