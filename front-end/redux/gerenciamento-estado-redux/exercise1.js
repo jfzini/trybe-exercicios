@@ -4,7 +4,6 @@ import { composeWithDevTools } from '@redux-devtools/extension';
 const INITIAL_STATE = {
   colors: ['white', 'gray', 'red', 'green', 'blue', 'yellow'],
   index: 0,
-  selectedColor: 'white',
 };
 
 const reducer = (state = INITIAL_STATE, action) => {
