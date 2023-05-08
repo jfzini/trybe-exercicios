@@ -1,13 +1,14 @@
 import './App.css';
 import { connect } from 'react-redux';
+import { actionCreator } from './redux/actions';
 
-function App({ countState }) {
+function App({ countState, dispatch }) {
   return (
     <div className="App">
       <h2>Contador</h2>
       <p>{countState}</p>
-      <button>Incrementar 1</button>
-      <button>Incrementar 5</button>
+      <button onClick={dispatch(actionCreator())}>Incrementar 1</button>
+      <button onClick={dispatch(actionCreator(5))}>Incrementar 5</button>
     </div>
   );
 }
