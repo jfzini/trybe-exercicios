@@ -86,13 +86,13 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 
 ### Section 6: Testes automatizados com React Testing Library
 - [x] 6.1 - RTL - Primeiros passos
-- [ ] 6.2 - RTL - Mocks e Inputs
-- [ ] 6.3 - RTL - Testando React Router
-- [ ] 6.4 - Projeto - Testes em React
+- [x] 6.2 - RTL - Mocks e Inputs
+- [x] 6.3 - RTL - Testando React Router
+- [x] 6.4 - Projeto - Testes em React
 
 ### Section 7: Gerenciamento de estado com Redux
-- [ ] 7.1 - Introdução ao Redux - O estado global da aplicação
-- [ ] 7.2 - Usando o Redux no React
+- [x] 7.1 - Introdução ao Redux - O estado global da aplicação
+- [x] 7.2 - Usando o Redux no React
 - [ ] 7.3 - Usando o Redux no React - Prática
 - [ ] 7.4 - Usando o Redux no React - Actions Assíncronas
 - [ ] 7.5 - Testes síncronos com React-Redux
