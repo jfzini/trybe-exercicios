@@ -20,8 +20,8 @@ function App({ countState, clickState, dispatch }) {
 }
 
 const mapStateToProps = (state) => ({
-  countState: state.count,
-  clickState: state.clicks,
+  countState: state.counter.count,
+  clickState: state.counter.clicks,
 });
 
 export default connect(mapStateToProps)(App);
