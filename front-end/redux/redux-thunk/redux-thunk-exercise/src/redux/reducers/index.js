@@ -9,15 +9,22 @@ const INITIAL_STATE = {
 export const dogReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case REQUEST_STARTED:
-      return { ...state, isFetching: true };
+      return {
+        ...state,
+        isFetching: true,
+        imageURL: '',
+        errorMessage: '',
+      };
     case REQUEST_SUCESSFUL:
       return {
+        ...state,
         isFetching: false,
         imageURL: action.payload,
         errorMessage: '',
       };
     case REQUEST_FAILED:
       return {
+        ...state,
         isFetching: false,
         imageURL: '',
         errorMessage: action.payload,

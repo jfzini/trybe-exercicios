@@ -12,7 +12,7 @@ export const fetchDogImage = () => {
   return (dispatch) => {
     dispatch(requestStarted());
     fetch('https://dog.ceo/api/breeds/image/random')
-      .then((response) => response.json)
+      .then((response) => response.json())
       .then((data) => dispatch(requestSucessful(data.message)))
       .catch((error) => dispatch(requestFailed(error)));
   };
