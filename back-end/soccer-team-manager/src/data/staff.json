@@ -33,11 +33,11 @@
   },
   {
     "id": "f7dfcf07-7598-4027-a8f5-bc642d60c2ea",
-    "name": "Teste",
-    "position": "Software Engineer",
-    "email": "test@test.com",
-    "phone": "+55 33 33333-3333",
-    "status": "available"
+    "name": "Teste alterado",
+    "position": "UX/UI designer",
+    "email": "testealterado@gmail.com",
+    "phone": "+55 11 11111-1111",
+    "status": "unavailable"
   },
   {
     "id": "9357f723-d2f2-4623-be4d-4b3f544e34da",
