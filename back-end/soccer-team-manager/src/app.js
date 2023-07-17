@@ -15,6 +15,17 @@ app.post('/add', (req, res) => {
   const newPerson = { id, name, age, city, staff, position };
   personelData.push(newPerson);
   res.status(201).json(newPerson);
-})
+});
+
+app.use(express.text());
+app.put('/update/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, age, city, staff, position } = req.body;
+  const personIndex = personelData.findIndex((person) => person.id === id);
+  if (personIndex === -1) return res.status(404).json({ message: 'Pessoa não encontrada' });
+  const newPerson = { id, name, age, city, staff, position };
+  personelData[personIndex] = newPerson;
+  res.status(200).json(newPerson);
+});
 
 module.exports = app;
