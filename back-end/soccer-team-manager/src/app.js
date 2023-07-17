@@ -17,7 +17,6 @@ app.post('/add', (req, res) => {
   res.status(201).json(newPerson);
 });
 
-app.use(express.text());
 app.put('/update/:id', (req, res) => {
   const { id } = req.params;
   const { name, age, city, staff, position } = req.body;
@@ -26,6 +25,15 @@ app.put('/update/:id', (req, res) => {
   const newPerson = { id, name, age, city, staff, position };
   personelData[personIndex] = newPerson;
   res.status(200).json(newPerson);
+});
+
+app.patch('/update-name/:id', (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  const personIndex = personelData.findIndex((person) => person.id === id);
+  if (personIndex === -1) return res.status(404).json({ message: 'Pessoa não encontrada' });
+  personelData[personIndex].name = name;
+  res.status(200).json(personelData[personIndex]);
 });
 
 module.exports = app;
