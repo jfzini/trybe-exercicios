@@ -31,4 +31,16 @@ const updateData = async (pathname, data) => {
   await fs.writeFile(path.resolve(__dirname, `../${pathname}`), newData);
 };
 
-module.exports = { readData, addNewData, updateData };
+const deleteData = async (pathname, id) => {
+  const currentData = await readData(pathname);
+  const filteredData = currentData.filter((item) => item.id !== id);
+  if (currentData.length === filteredData.length) throw new Error('Item não encontrado no banco de dados');
+
+  const newData = JSON.stringify(filteredData);
+
+  await fs.writeFile(path.resolve(__dirname, `../${pathname}`), newData);
+};
+
+
+
+module.exports = { readData, addNewData, updateData, deleteData };

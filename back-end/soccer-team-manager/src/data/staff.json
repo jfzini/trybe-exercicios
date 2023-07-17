@@ -24,27 +24,11 @@
     "status": "available"
   },
   {
-    "id": "e084272e-6b5c-45e5-9f23-372909876183",
-    "name": "Maria Vitória Zini",
-    "position": "Software Engineer",
-    "email": "mvzini@gmail.com",
-    "phone": "unknown",
-    "status": "available"
-  },
-  {
     "id": "f7dfcf07-7598-4027-a8f5-bc642d60c2ea",
-    "name": "Teste alterado",
+    "name": "Teste alteradinho",
     "position": "UX/UI designer",
     "email": "testealterado@gmail.com",
     "phone": "+55 11 11111-1111",
     "status": "unavailable"
-  },
-  {
-    "id": "9357f723-d2f2-4623-be4d-4b3f544e34da",
-    "name": "Alberto Godoy",
-    "position": "Sr. Software Engineer",
-    "email": "albertogodoy@gmail.com",
-    "phone": "+55 11 91985-9000",
-    "status": "available"
   }
 ]
