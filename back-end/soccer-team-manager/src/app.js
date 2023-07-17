@@ -1,5 +1,5 @@
 const express = require('express');
-const personelData = require('./data');
+const personelData = require('./data/data');
 const { randomUUID } = require('crypto');
 
 const app = express();

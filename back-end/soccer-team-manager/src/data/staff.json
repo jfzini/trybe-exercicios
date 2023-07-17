@@ -1,0 +1,26 @@
+[
+  {
+    "id": "f874272e-6b5c-45e5-9f23-372909876183",
+    "name": "João Felipe Zini",
+    "position": "Software Engineer",
+    "email": "joaofelipezini@gmail.com",
+    "phone": "+55 31 99679-7756",
+    "status": "available"
+  },
+  {
+    "id": "241116f0-56b1-4754-82ff-47e19d7b9866",
+    "name": "Matheus Ramos",
+    "position": "Software Engineer",
+    "email": "matheusramos@gmail.com",
+    "phone": "+55 24 99994-9604",
+    "status": "available"
+  },
+  {
+    "id": "6a3d4882-d2e1-46fe-b376-bbdda6fe5bfc",
+    "name": "Ébio Narduche",
+    "position": "Software Engineer",
+    "email": "ebionarduche@gmail.com",
+    "phone": "+55 24 98152-9446",
+    "status": "available"
+  }
+]
