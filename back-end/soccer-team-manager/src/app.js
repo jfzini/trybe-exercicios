@@ -36,4 +36,12 @@ app.patch('/update-name/:id', (req, res) => {
   res.status(200).json(personelData[personIndex]);
 });
 
+app.delete('/delete/:id', (req, res) => {
+  const { id } = req.params;
+  const personIndex = personelData.findIndex((person) => person.id === id);
+  if (personIndex === -1) return res.status(404).json({ message: 'Pessoa não encontrada' });
+  personelData.splice(personIndex, 1);
+  res.status(204).end();
+})
+
 module.exports = app;
