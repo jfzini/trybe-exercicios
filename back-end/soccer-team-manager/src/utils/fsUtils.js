@@ -10,4 +10,15 @@ const readData = async (pathname) => {
   }
 };
 
-module.exports = { readData };
+const writeData = async (pathname, data) => {
+  try {
+    const currentData = await readData(pathname);
+    const newData = JSON.stringify([...currentData, data]);
+
+    await fs.writeFile(path.resolve(__dirname, `../${pathname}`), newData);
+  } catch (error) {
+    console.log(`Erro ao escrever arquivo: ${error}`);
+  }
+};
+
+module.exports = { readData, writeData };
