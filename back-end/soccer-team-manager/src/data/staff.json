@@ -38,5 +38,13 @@
     "email": "test@test.com",
     "phone": "+55 33 33333-3333",
     "status": "available"
+  },
+  {
+    "id": "9357f723-d2f2-4623-be4d-4b3f544e34da",
+    "name": "Alberto Godoy",
+    "position": "Sr. Software Engineer",
+    "email": "albertogodoy@gmail.com",
+    "phone": "+55 11 91985-9000",
+    "status": "available"
   }
 ]
