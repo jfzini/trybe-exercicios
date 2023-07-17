@@ -19,7 +19,7 @@ app.get('/staff', async (_req, res) => {
   res.status(200).json(staffData);
 });
 
-app.post('/add', async (req, res) => {
+app.post('/staff', async (req, res) => {
   const { name, position, email, phone, status } = req.body;
   const id = randomUUID();
   const newEmployee = { id, name, position, email, phone, status };
@@ -31,7 +31,7 @@ app.post('/add', async (req, res) => {
   }
 });
 
-app.patch('/update/:id', async (req, res) => {
+app.patch('/staff/:id', async (req, res) => {
   const { id } = req.params;
   const updatedData = { id, ...req.body };
 
@@ -43,7 +43,7 @@ app.patch('/update/:id', async (req, res) => {
   }
 });
 
-app.put('/update/:id', async (req, res) => {
+app.put('/staff/:id', async (req, res) => {
   const { id } = req.params;
   const updatedData = { id, ...req.body };
 
@@ -55,7 +55,7 @@ app.put('/update/:id', async (req, res) => {
   }
 });
 
-app.delete('/delete/:id', async (req, res) => {
+app.delete('/staff/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
