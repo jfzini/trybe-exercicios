@@ -1,4 +1,4 @@
-[
+const mockStaffData = [
   {
     "id": "f874272e-6b5c-45e5-9f23-372909876183",
     "name": "João Felipe Zini",
@@ -38,21 +38,7 @@
     "email": "albertogodoy@gmail.com",
     "phone": "+55 11 91985-9000",
     "status": "available"
-  },
-  {
-    "id": "c2d44f16-6f81-4a5f-b816-8dc7402cce70",
-    "name": "Alberto Godoy",
-    "position": "Sr. Software Engineer",
-    "email": "albertogodoy@gmail.com",
-    "phone": "+55 11 91985-9000",
-    "status": "available"
-  },
-  {
-    "id": "c2d44f16-6f81-4a5f-b816-8dc7402cce70",
-    "name": "Alberto Godoy",
-    "position": "Sr. Software Engineer",
-    "email": "albertogodoy@gmail.com",
-    "phone": "+55 11 91985-9000",
-    "status": "available"
   }
-]
+];
+
+module.exports = mockStaffData;

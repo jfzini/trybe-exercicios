@@ -19,6 +19,14 @@ app.get('/staff', async (_req, res) => {
   res.status(200).json(staffData);
 });
 
+app.get('/staff/:id', async (req, res) => {
+  const staffData = await readData(STAFF_PATH);
+  const { id } = req.params;
+  const foundEmployee = staffData.find((employee) => employee.id === id);
+  if (!foundEmployee) return res.status(404).json({ message: 'Funcionário não encontrado' });
+  res.status(200).json(foundEmployee);
+});
+
 app.post('/staff', async (req, res) => {
   const { name, position, email, phone, status } = req.body;
   const id = randomUUID();
