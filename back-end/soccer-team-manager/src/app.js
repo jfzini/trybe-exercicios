@@ -12,7 +12,7 @@ const STAFF_PATH = './data/staff.json';
 const app = express();
 app.use(express.json());
 
-app.get('/', (_req, res) => res.status(200).sendFile(__dirname + '/index.html'));
+app.get('/', (_req, res) => res.status(200).sendFile(`${__dirname}/index.html`));
 
 app.get('/staff', async (_req, res) => {
   const staffData = await readData(STAFF_PATH);
@@ -32,27 +32,11 @@ app.post('/staff', async (req, res) => {
 });
 
 app.patch('/staff/:id', async (req, res) => {
-  const { id } = req.params;
-  const updatedData = { id, ...req.body };
-
-  try {
-    await updateData(STAFF_PATH, updatedData);
-    res.status(200).json(updatedData);
-  } catch (error) {
-    res.status(404).json({ message: error.message });
-  }
+  updateData(req, res, STAFF_PATH);
 });
 
 app.put('/staff/:id', async (req, res) => {
-  const { id } = req.params;
-  const updatedData = { id, ...req.body };
-
-  try {
-    await updateData(STAFF_PATH, updatedData);
-    res.status(200).json(updatedData);
-  } catch (error) {
-    res.status(404).json({ message: error.message });
-  }
+  updateData(req, res, STAFF_PATH);
 });
 
 app.delete('/staff/:id', async (req, res) => {
