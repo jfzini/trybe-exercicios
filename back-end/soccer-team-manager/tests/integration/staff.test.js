@@ -12,6 +12,23 @@ const { expect } = chai;
 
 chai.use(chaiHttp);
 
+const expectedSingleOutput = {
+  id: 'f874272e-6b5c-45e5-9f23-372909876183',
+  name: 'João Felipe Zini',
+  position: 'Software Engineer',
+  email: 'joaofelipezini@gmail.com',
+  phone: '+55 31 99679-7756',
+  status: 'available',
+};
+
+const newMember = {
+  name: 'Maria Vitória Zini',
+  position: 'Software Engineer',
+  email: 'mvzini@gmail.com',
+  phone: '+55 31 99679-7756',
+  status: 'available',
+};
+
 describe('testing /staff routes', function () {
   describe('testing GET /staff', function () {
     beforeEach(function () {
@@ -21,15 +38,6 @@ describe('testing /staff routes', function () {
     afterEach(function () {
       sinon.restore();
     });
-
-    const expectedSingleOutput = {
-      id: 'f874272e-6b5c-45e5-9f23-372909876183',
-      name: 'João Felipe Zini',
-      position: 'Software Engineer',
-      email: 'joaofelipezini@gmail.com',
-      phone: '+55 31 99679-7756',
-      status: 'available',
-    };
 
     it('should return an array with all staff data on /staff', async function () {
       const response = await chai.request(app).get('/staff');
@@ -41,9 +49,7 @@ describe('testing /staff routes', function () {
     });
 
     it('should return an object with the data of the respective staff member on /staff/:id', async function () {
-      const response = await chai
-        .request(app)
-        .get('/staff/f874272e-6b5c-45e5-9f23-372909876183');
+      const response = await chai.request(app).get('/staff/f874272e-6b5c-45e5-9f23-372909876183');
 
       expect(response.status).to.be.equal(200);
 
@@ -60,24 +66,59 @@ describe('testing /staff routes', function () {
   });
 
   describe('testing POST /staff', function () {
+    beforeEach(function () {
+      sinon.stub(fs, 'writeFile').resolves();
+    });
+
+    afterEach(function () {
+      sinon.restore();
+    });
+
     it('should add a new staff member on /staff', async function () {
-      const writeFileStub = sinon.stub(fs, 'writeFile').resolves();
-
-      const newMember = {
-        name: 'Maria Vitória Zini',
-        position: 'Software Engineer',
-        email: 'joaofelipezini@gmail.com',
-        phone: '+55 31 99679-7756',
-        status: 'available',
-      };
-
       const response = await chai.request(app).post('/staff').send(newMember);
 
       expect(response.status).to.be.equal(201);
       expect(response.body).to.haveOwnProperty('id');
 
-      expect(writeFileStub.calledOnce).to.be.true;
+      expect(fs.writeFile.calledOnce).to.be.true;
+    });
+
+    it('should return 400 if request body is missing a required field', async function () {
+      const incompleteNewMember = {
+        name: 'Maria Vitória Zini',
+        position: 'Software Engineer',
+        phone: '+55 31 99679-7756',
+        status: 'available',
+      };
+
+      const response = await chai.request(app).post('/staff').send(incompleteNewMember);
+
+      expect(response.status).to.be.equal(400);
+      expect(response.body).to.deep.equal({ message: 'Todos os campos são obrigatórios' });
+    });
+  });
+
+  describe('testing PUT /staff', function () {
+    beforeEach(function () {
+      sinon.stub(fs, 'readFile').resolves(JSON.stringify(mockStaffData));
+      sinon.stub(fs, 'writeFile').resolves();
+    });
+
+    afterEach(function () {
       sinon.restore();
+    });
+
+    it('should update a staff member on /staff/:id', async function () {
+      const response = await chai
+        .request(app)
+        .put('/staff/241116f0-56b1-4754-82ff-47e19d7b9866')
+        .send(newMember);
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal({
+        id: '241116f0-56b1-4754-82ff-47e19d7b9866',
+        ...newMember,
+      });
     });
   });
 });

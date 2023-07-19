@@ -28,14 +28,17 @@ app.get('/staff/:id', async (req, res) => {
 });
 
 app.post('/staff', async (req, res) => {
-  const { name, position, email, phone, status } = req.body;
-  const id = randomUUID();
-  const newEmployee = { id, name, position, email, phone, status };
   try {
+    const { name, position, email, phone, status } = req.body;
+    if (!name || !position || !email || !phone || !status) {
+      throw new Error('Todos os campos são obrigatórios');
+    }
+    const id = randomUUID();
+    const newEmployee = { id, name, position, email, phone, status };
     await addNewData(STAFF_PATH, newEmployee);
     res.status(201).json(newEmployee);
   } catch (error) {
-    res.status(404).json({ message: error.message });
+    res.status(400).json({ message: error.message });
   }
 });
 
