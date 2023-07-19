@@ -56,8 +56,16 @@ describe('testing /staff routes', function () {
       expect(response.body).to.deep.equal(expectedSingleOutput);
     });
 
-    it('should return a 404 error if the staff member is not found on /staff/:id', async function () {
+    it('should return a 400 error if the ID informed is not an UUID', async function () {
       const response = await chai.request(app).get('/staff/123456789');
+
+      expect(response.status).to.be.equal(400);
+
+      expect(response.body).to.deep.equal({ message: 'O ID informado precisa ser um UUID' });
+    });
+
+    it('should return a 404 error if the staff member is not found', async function () {
+      const response = await chai.request(app).get('/staff/d984272e-6b5c-45e5-9f23-372909856659');
 
       expect(response.status).to.be.equal(404);
 
@@ -114,11 +122,11 @@ describe('testing /staff routes', function () {
         .put('/staff/241116f0-56b1-4754-82ff-47e19d7b9866')
         .send(newMember);
 
-      expect(response.status).to.be.equal(200);
-      expect(response.body).to.deep.equal({
-        id: '241116f0-56b1-4754-82ff-47e19d7b9866',
-        ...newMember,
-      });
+        expect(response.body).to.deep.equal({
+          id: '241116f0-56b1-4754-82ff-47e19d7b9866',
+          ...newMember,
+        });
+        expect(response.status).to.be.equal(200);
     });
   });
 });

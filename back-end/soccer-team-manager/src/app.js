@@ -4,6 +4,7 @@ const { randomUUID } = require('crypto');
 
 // internal files/functions
 const { readData, addNewData, updateData, deleteData } = require('./utils/fsUtils');
+const { execFileSync } = require('child_process');
 
 // constants
 const STAFF_PATH = './data/staff.json';
@@ -12,6 +13,32 @@ const STAFF_PATH = './data/staff.json';
 const app = express();
 app.use(express.json());
 
+
+const validateUUID = (req, res, next) => {
+  const regex = /^([0-9a-f]){8}-(([0-9a-f]){4}-){3}([0-9a-f]){12}$/i;
+  const { id } = req.params;
+  if (!regex.test(id)) {
+    res.status(400).json({ message: 'O ID informado precisa ser um UUID' });
+  }
+  else {
+    next();
+  }
+};
+
+
+const validatePostFields = (req, res, next) => {
+  const { name, position, email, phone, status } = req.body;
+  if (!name || !position || !email || !phone || !status) {
+    res.status(400).json({ message: 'Todos os campos são obrigatórios' });
+  }
+  else {
+    next();
+  }
+};
+
+
+
+
 app.get('/', (_req, res) => res.status(200).sendFile(`${__dirname}/index.html`));
 
 app.get('/staff', async (_req, res) => {
@@ -19,7 +46,7 @@ app.get('/staff', async (_req, res) => {
   res.status(200).json(staffData);
 });
 
-app.get('/staff/:id', async (req, res) => {
+app.get('/staff/:id', validateUUID, async (req, res) => {
   const staffData = await readData(STAFF_PATH);
   const { id } = req.params;
   const foundEmployee = staffData.find((employee) => employee.id === id);
@@ -27,14 +54,11 @@ app.get('/staff/:id', async (req, res) => {
   res.status(200).json(foundEmployee);
 });
 
-app.post('/staff', async (req, res) => {
+app.post('/staff', validatePostFields, async (req, res) => {
+  const id = randomUUID();
+  const newEmployee = { id, ...req.body };
+
   try {
-    const { name, position, email, phone, status } = req.body;
-    if (!name || !position || !email || !phone || !status) {
-      throw new Error('Todos os campos são obrigatórios');
-    }
-    const id = randomUUID();
-    const newEmployee = { id, name, position, email, phone, status };
     await addNewData(STAFF_PATH, newEmployee);
     res.status(201).json(newEmployee);
   } catch (error) {
@@ -42,15 +66,15 @@ app.post('/staff', async (req, res) => {
   }
 });
 
-app.patch('/staff/:id', async (req, res) => {
+app.patch('/staff/:id', validateUUID, async (req, res) => {
   updateData(req, res, STAFF_PATH);
 });
 
-app.put('/staff/:id', async (req, res) => {
+app.put('/staff/:id', validateUUID, async (req, res) => {
   updateData(req, res, STAFF_PATH);
 });
 
-app.delete('/staff/:id', async (req, res) => {
+app.delete('/staff/:id', validateUUID, async (req, res) => {
   const { id } = req.params;
 
   try {
