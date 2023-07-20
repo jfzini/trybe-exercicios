@@ -1,8 +1,4 @@
-// dependencies
 const express = require('express');
-
-// internal files/functions
-const { execFileSync } = require('child_process');
 const staffRouter = require('./routers/staff.router');
 
 // API configuration

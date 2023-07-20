@@ -3,7 +3,7 @@ const { randomUUID } = require('crypto');
 const { readData, addNewData, deleteData, updateData } = require('../utils/fsUtils');
 
 // middlewares
-const staffRouter =  express.Router();
+const staffRouter = express.Router();
 const { validateUUID, validatePostFields } = require('../middlewares/staff.middlewares');
 
 // constants
@@ -54,6 +54,5 @@ staffRouter.delete('/:id', async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 });
-
 
 module.exports = staffRouter;
