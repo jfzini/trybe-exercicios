@@ -128,5 +128,13 @@ describe('testing /staff routes', function () {
         });
         expect(response.status).to.be.equal(200);
     });
+
+    it('should return a 400 error if the ID informed is not an UUID', async function () {
+      const response = await chai.request(app).put('/staff/123456789');
+
+      expect(response.status).to.be.equal(400);
+
+      expect(response.body).to.deep.equal({ message: 'O ID informado precisa ser um UUID' });
+    });
   });
 });
