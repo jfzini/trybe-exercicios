@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "debug": "nodemon --ignore coverage src/server.js",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrs.json . --ext .js, .jsx"
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx"
   },
   "repository": {
     "type": "git",

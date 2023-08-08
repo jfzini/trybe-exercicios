@@ -1,5 +1,5 @@
-const connection = require('../configs/connection');
 const camelize = require('camelize');
+const connection = require('../configs/connection');
 
 const findAll = async () => {
   const [passengers] = await connection.execute('SELECT * FROM passengers;');
