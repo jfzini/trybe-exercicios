@@ -6,4 +6,12 @@ const findAll = async () => {
   return camelize(passengers);
 };
 
-module.exports = { findAll };
+const findById = async (id) => {
+  const [[passenger]] = await connection.execute(
+    'SELECT * FROM passengers WHERE id = ?;',
+    [id],
+  );
+  return camelize(passenger);
+};
+
+module.exports = { findAll, findById };
