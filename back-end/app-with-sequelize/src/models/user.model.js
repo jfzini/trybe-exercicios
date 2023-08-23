@@ -10,10 +10,13 @@ const UserModel = (sequelize, DataTypes) => {
       underscored: true,
     },
   );
-  // (async () => {
-  //   await sequelize.sync({ force: true });
-  //   // As funções vão aqui
-  // })();
+  (async () => {
+    await sequelize.sync({ force: true });
+    const sara = await User.create({
+      fullName: 'Sara Kubitschek',
+      email: 'sarakbt@gmail.com',
+    });
+  })();
   return User;
 };
 
