@@ -93,63 +93,63 @@ Contém todas as atividades desenvolvidas por mim, __[João Felipe Zini](https:/
 ### Section 7: Gerenciamento de estado com Redux
 - [x] 7.1 - Introdução ao Redux - O estado global da aplicação
 - [x] 7.2 - Usando o Redux no React
-- [ ] 7.3 - Usando o Redux no React - Prática
-- [ ] 7.4 - Usando o Redux no React - Actions Assíncronas
-- [ ] 7.5 - Testes síncronos com React-Redux
-- [ ] 7.6 - Projeto - Trybe Wallet
+- [x] 7.3 - Usando o Redux no React - Prática
+- [x] 7.4 - Usando o Redux no React - Actions Assíncronas
+- [x] 7.5 - Testes síncronos com React-Redux
+- [x] 7.6 - Projeto - Trybe Wallet
 
 ### Section 8: Projeto Jogo de Trivia
-- [ ] 8.1 - Projeto - Jogo de Trivia
+- [x] 8.1 - Projeto - Jogo de Trivia
 
 ### Section 9: Context API e React Hooks
-- [ ] 9.1 - Context API do React
-- [ ] 9.2 - React Hooks - useState e useContext
-- [ ] 9.3 - React Hooks - useEffect e Hooks customizados
-- [ ] 9.4 - Projeto - StarWars Datatable com Context API e Hooks
+- [x] 9.1 - Context API do React
+- [x] 9.2 - React Hooks - useState e useContext
+- [x] 9.3 - React Hooks - useEffect e Hooks customizados
+- [x] 9.4 - Projeto - StarWars Datatable com Context API e Hooks
 
 ### Section 10: Projeto App de Receitas
-- [ ] 10.1 - Projeto - App de Receitas
+- [x] 10.1 - Projeto - App de Receitas
 
 ## Módulo 3: Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ### Section 1: Docker: Utilizando Containers
-- [ ] 1.1 - Utilizando Containers - Docker
-- [ ] 1.2 - Manipulando Imagens no Docker
-- [ ] 1.3 - Orquestrando Container com Docker Compose
-- [ ] 1.4 - Projeto - Docker Todo-List
+- [x] 1.1 - Utilizando Containers - Docker
+- [x] 1.2 - Manipulando Imagens no Docker
+- [x] 1.3 - Orquestrando Container com Docker Compose
+- [x] 1.4 - Projeto - Docker Todo-List
 
 ### Section 2: Introdução à SQL
-- [ ] 2.1 - Banco de dados SQL
-- [ ] 2.2 - Encontrando dados em um banco de dados
-- [ ] 2.3 - Filtrando dados de forma específica
-- [ ] 2.4 - Manipulando tabelas
-- [ ] 2.5 - Projeto - All For One
+- [x] 2.1 - Banco de dados SQL
+- [x] 2.2 - Encontrando dados em um banco de dados
+- [x] 2.3 - Filtrando dados de forma específica
+- [x] 2.4 - Manipulando tabelas
+- [x] 2.5 - Projeto - All For One
 
 ### Section 3: Funções SQL, Joins e Normalização
-- [ ] 3.1 - Funções mais usadas no SQL
-- [ ] 3.2 - Descomplicando JOINs
-- [ ] 3.3 - Transformando ideiais em um modelo de banco de dados
-- [ ] 3.4 - Aula ao Vivo + Projeto - All For One
+- [x] 3.1 - Funções mais usadas no SQL
+- [x] 3.2 - Descomplicando JOINs
+- [x] 3.3 - Transformando ideiais em um modelo de banco de dados
+- [x] 3.4 - Aula ao Vivo + Projeto - All For One
 
 ### Section 4: Introdução ao desenvolvimento Web com Node.js
-- [ ] 4.1 - Runtime Assíncrono
-- [ ] 4.2 - Node.js: API REST com Express
-- [ ] 4.3 - Node.js: Testes de Integração
-- [ ] 4.4 - Express: Middlewares
-- [ ] 4.5 - Node.js: Express e Mysql
-- [ ] 4.6 - Atividades + Projeto - Talker Manager
+- [x] 4.1 - Runtime Assíncrono
+- [x] 4.2 - Node.js: API REST com Express
+- [x] 4.3 - Node.js: Testes de Integração
+- [x] 4.4 - Express: Middlewares
+- [x] 4.5 - Node.js: Express e Mysql
+- [x] 4.6 - Atividades + Projeto - Talker Manager
 
 ### Section 5: Arquitetura de Software: Model, Service e Controller
-- [ ] 5.1 - Arquitetura de Software: Camada Model
-- [ ] 5.2 - Arquitetura de Software: Camada Service
-- [ ] 5.3 - Arquitetura de Software: Camada Controller
-- [ ] 5.4 - Projeto - Store Manager
+- [x] 5.1 - Arquitetura de Software: Camada Model
+- [x] 5.2 - Arquitetura de Software: Camada Service
+- [x] 5.3 - Arquitetura de Software: Camada Controller
+- [x] 5.4 - Projeto - Store Manager
 
 ### Section 6: Node.js: ORM e Autenticação
-- [ ] 6.1 - ORM - Interface da aplicação com o banco de dados
-- [ ] 6.2 - ORM - Associations 1:1 e 1:N
-- [ ] 6.3 - ORM - Associations N:N e Transactions
-- [ ] 6.4 - JWT - (JSON Web Token)
+- [x] 6.1 - ORM - Interface da aplicação com o banco de dados
+- [x] 6.2 - ORM - Associations 1:1 e 1:N
+- [x] 6.3 - ORM - Associations N:N e Transactions
+- [x] 6.4 - JWT - (JSON Web Token)
 - [ ] 6.5 - Projeto - API de Blogs
 
 ### Section 7: Deployment
